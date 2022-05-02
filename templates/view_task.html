@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+{% block head %}
+{% endblock head %}
+
+{% block body %}
+<div id="task-view">
+    <span class="title-text" id="task-title-text">
+        Let's go! <br />
+        We suggest you do this first:
+    </span>
+    <div id="task-text">
+        <img id="task-icon" src="/static/assets/images/icons8-bunny-64.png">
+        <p>{{ task.content }}</p>
+    </div>
+    <form id="task-actions" method="POST">
+        <button class="submit-button-style-2 action-button" value="SWITCH" name="action">Switch</button>
+        <button class="submit-button-style-1 action-button" value="DONE" name="action">Done</button>
+    </form>
+</div>
+{% endblock body %}

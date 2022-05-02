@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+{% block head %}
+{% endblock head %}
+
+{% block body %}
+<h1 class="title-text">Tasks</h1>
+<table class="tasks">
+    {% for task in tasks %}
+    <tr>
+        <td></td>
+        <td><p>{{ tasks.index(task)+1 }}. {{ task.content }}</p></td>
+        <td><a href="/update/{{task.id}}" class="edit-button">
+            <img src="/static/assets/images/icons8-edit-96.png" alt="" />
+        </a></td>
+        <td><a href="/delete/{{task.id}}" class="delete-button">
+            <img src="/static/assets/images/icons8-delete-48 (1).png" alt="" />
+        </a></td>
+    </tr>
+    {% endfor %}
+</table>
+
+
+{% endblock body %}
